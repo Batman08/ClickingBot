@@ -20,3 +20,10 @@ def toggle_event(key):
         #change state of clicking
         global clicking
         clicking = not clicking
+
+click_thread = threading.Thread(target=clicker)
+click_thread.start()
+
+#listen for key presses
+with Listener(on_press=toggle_event) as listener:
+    listener.join()
