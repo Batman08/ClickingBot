@@ -14,3 +14,9 @@ def clicker():
             mouse.click(Button.left,1)
         #sleep so theres enough time to activate or deactivate
         time.sleep(0.001)
+
+def toggle_event(key):
+    if key == TOGGLE_KEY:
+        #change state of clicking
+        global clicking
+        clicking = not clicking
